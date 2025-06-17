@@ -102,14 +102,14 @@ def get_corr(price, factors, negMarketValue):
         weighted_ic_std = weighted_ic_series.std()
         weighted_icir = weighted_ic_mean / weighted_ic_std if weighted_ic_std != 0 else np.nan
         
-        print(f"** {n}日 因子表现报告 **")
-        print(f"IC均值 (Mean IC): {ic_mean:.4f}")
-        print(f"IC标准差 (IC Std): {ic_std:.4f}")
-        print(f"信息比率 (ICIR): {icir:.4f}")
+        print(f"------------- {n} Day Factor Performance Report -------------")
+        print(f"Mean IC: {ic_mean:.4f}")
+        print(f"IC Std: {ic_std:.4f}")
+        print(f"ICIR: {icir:.4f}")
         print("-" * 20)
-        print(f"加权IC均值 (Weighted Mean IC): {weighted_ic_mean:.4f}")
-        print(f"加权IC标准差 (Weighted IC Std): {weighted_ic_std:.4f}")
-        print(f"加权信息比率 (Weighted ICIR): {weighted_icir:.4f}")
+        print(f"Weighted Mean IC: {weighted_ic_mean:.4f}")
+        print(f"Weighted IC Std: {weighted_ic_std:.4f}")
+        print(f"Weighted ICIR: {weighted_icir:.4f}")
 
 def main():
     folder_path = 'data/'
